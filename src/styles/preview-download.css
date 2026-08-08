@@ -1,0 +1,325 @@
+/* Preview */
+.preview-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.preview-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--bg-1);
+}
+.preview-head h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.preview-meta {
+  font-size: 12px;
+  color: var(--text-2);
+  font-family: var(--mono);
+}
+.preview-stage {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  padding: 30px;
+  background:
+    radial-gradient(700px 380px at 50% 40%, rgba(79, 140, 255, 0.06), transparent 60%),
+    var(--bg-0);
+}
+.preview-canvas {
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-2);
+  max-width: 80vw;
+  max-height: 70vh;
+  overflow: hidden;
+  line-height: 0;
+}
+.preview-img {
+  display: block;
+  max-width: 80vw;
+  max-height: 70vh;
+  object-fit: contain;
+}
+.preview-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-soft);
+  background: var(--bg-1);
+  flex-wrap: wrap;
+}
+.pc-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-3);
+  color: var(--text-0);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  transition: all 0.15s;
+}
+.pc-btn:hover {
+  background: var(--surface-hover);
+}
+.pc-btn.play {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+.preview-track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 240px;
+}
+.frame-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-1);
+  white-space: nowrap;
+}
+.speed-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.speed-chip {
+  padding: 6px 10px;
+  border-radius: var(--radius-s);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--text-1);
+}
+.speed-chip.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Download */
+.download-wrap {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  overflow: auto;
+}
+.download-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(360px, 520px);
+  gap: 20px;
+  align-items: start;
+  width: min(960px, 100%);
+}
+@media (max-width: 880px) {
+  .download-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.download-card {
+  text-align: center;
+  padding: 36px 32px;
+  width: 100%;
+}
+.dl-icon {
+  font-size: 52px;
+  margin-bottom: 14px;
+}
+.download-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.download-card p {
+  color: var(--text-1);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+.dl-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.dl-stat {
+  background: var(--bg-3);
+  border-radius: var(--radius-m);
+  padding: 14px 8px;
+}
+.dl-stat b {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+.dl-stat span {
+  font-size: 11px;
+  color: var(--text-2);
+}
+.dl-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  font-size: 16px;
+}
+.dl-back {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+.dl-direct {
+  display: block;
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-2);
+  text-decoration: underline;
+}
+
+/* Options panel */
+.download-options {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+.dl-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dl-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+  color: var(--text-0);
+  line-height: 1.1;
+}
+.dl-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dl-chip {
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 999px;
+  background: var(--bg-3);
+  color: var(--text-1);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.dl-chip:hover:not(.on):not(.disabled) {
+  background: var(--surface-hover);
+  color: var(--text-0);
+}
+.dl-chip.on {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+.dl-chip.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: var(--bg-3);
+  color: var(--text-2);
+}
+.dl-hint {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.5;
+  padding: 0 4px;
+}
+
+.dl-custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+.dl-input-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.dl-input-label input {
+  width: 84px;
+  padding: 6px 8px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--border);
+  background: var(--bg-3);
+  color: var(--text-0);
+  font-size: 13px;
+  font-family: var(--mono);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.dl-input-label input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.dl-times {
+  color: var(--text-2);
+  font-family: var(--mono);
+}
+.dl-aspect {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-2);
+  cursor: pointer;
+  user-select: none;
+}
+.dl-aspect input {
+  accent-color: var(--accent);
+  width: 14px;
+  height: 14px;
+}
+
+.dl-progress {
+  position: relative;
+  height: 6px;
+  background: var(--bg-3);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 12px 0 4px;
+}
+.dl-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 0.15s ease;
+}
+.dl-progress-text {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-2);
+  font-family: var(--mono);
+  margin-top: 4px;
+}
